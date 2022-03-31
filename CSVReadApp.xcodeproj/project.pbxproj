@@ -9,13 +9,21 @@
 /* Begin PBXBuildFile section */
 		4C3B4EE827F4E0B200C07A86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4EE727F4E0B200C07A86 /* AppDelegate.swift */; };
 		4C3B4EEA27F4E0B200C07A86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4EE927F4E0B200C07A86 /* SceneDelegate.swift */; };
-		4C3B4EEC27F4E0B200C07A86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4EEB27F4E0B200C07A86 /* ViewController.swift */; };
+		4C3B4EEC27F4E0B200C07A86 /* CSVHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4EEB27F4E0B200C07A86 /* CSVHomeViewController.swift */; };
 		4C3B4EEF27F4E0B200C07A86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B4EED27F4E0B200C07A86 /* Main.storyboard */; };
 		4C3B4EF127F4E0B400C07A86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B4EF027F4E0B400C07A86 /* Assets.xcassets */; };
 		4C3B4EF427F4E0B400C07A86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B4EF227F4E0B400C07A86 /* LaunchScreen.storyboard */; };
 		4C3B4EFF27F4E0B400C07A86 /* CSVReadAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4EFE27F4E0B400C07A86 /* CSVReadAppTests.swift */; };
 		4C3B4F0927F4E0B400C07A86 /* CSVReadAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F0827F4E0B400C07A86 /* CSVReadAppUITests.swift */; };
 		4C3B4F0B27F4E0B400C07A86 /* CSVReadAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F0A27F4E0B400C07A86 /* CSVReadAppUITestsLaunchTests.swift */; };
+		4C3B4F2227F4E23D00C07A86 /* issues.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2127F4E23D00C07A86 /* issues.csv */; };
+		4C3B4F2427F4E27B00C07A86 /* CSVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2327F4E27B00C07A86 /* CSVModel.swift */; };
+		4C3B4F2627F4E2A000C07A86 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2527F4E2A000C07A86 /* Constants.swift */; };
+		4C3B4F2827F4E2F100C07A86 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2727F4E2F100C07A86 /* UserTableViewCell.swift */; };
+		4C3B4F2A27F4E30200C07A86 /* CSVReadUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2927F4E30200C07A86 /* CSVReadUtil.swift */; };
+		4C3B4F2C27F4E31700C07A86 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2B27F4E31700C07A86 /* Extensions.swift */; };
+		4C3B4F2E27F4E45E00C07A86 /* CSVUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2D27F4E45E00C07A86 /* CSVUserViewModel.swift */; };
+		4C3B4F3027F4EF0000C07A86 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B4F2F27F4EF0000C07A86 /* CommonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +47,7 @@
 		4C3B4EE427F4E0B200C07A86 /* CSVReadApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CSVReadApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3B4EE727F4E0B200C07A86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C3B4EE927F4E0B200C07A86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C3B4EEB27F4E0B200C07A86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4C3B4EEB27F4E0B200C07A86 /* CSVHomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVHomeViewController.swift; sourceTree = "<group>"; };
 		4C3B4EEE27F4E0B200C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C3B4EF027F4E0B400C07A86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C3B4EF327F4E0B400C07A86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,14 @@
 		4C3B4F0427F4E0B400C07A86 /* CSVReadAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CSVReadAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C3B4F0827F4E0B400C07A86 /* CSVReadAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReadAppUITests.swift; sourceTree = "<group>"; };
 		4C3B4F0A27F4E0B400C07A86 /* CSVReadAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReadAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C3B4F2127F4E23D00C07A86 /* issues.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = issues.csv; sourceTree = "<group>"; };
+		4C3B4F2327F4E27B00C07A86 /* CSVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVModel.swift; sourceTree = "<group>"; };
+		4C3B4F2527F4E2A000C07A86 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4C3B4F2727F4E2F100C07A86 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		4C3B4F2927F4E30200C07A86 /* CSVReadUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReadUtil.swift; sourceTree = "<group>"; };
+		4C3B4F2B27F4E31700C07A86 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		4C3B4F2D27F4E45E00C07A86 /* CSVUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVUserViewModel.swift; sourceTree = "<group>"; };
+		4C3B4F2F27F4EF0000C07A86 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,12 +115,18 @@
 		4C3B4EE627F4E0B200C07A86 /* CSVReadApp */ = {
 			isa = PBXGroup;
 			children = (
-				4C3B4EE727F4E0B200C07A86 /* AppDelegate.swift */,
-				4C3B4EE927F4E0B200C07A86 /* SceneDelegate.swift */,
-				4C3B4EEB27F4E0B200C07A86 /* ViewController.swift */,
-				4C3B4EED27F4E0B200C07A86 /* Main.storyboard */,
-				4C3B4EF027F4E0B400C07A86 /* Assets.xcassets */,
+				4C3B4F2027F4E23200C07A86 /* CSVFiles */,
+				4C3B4F1B27F4E15D00C07A86 /* AppDelgates */,
+				4C3B4F1E27F4E19D00C07A86 /* Constant */,
+				4C3B4F1C27F4E18300C07A86 /* Extensions */,
+				4C3B4F1827F4E10D00C07A86 /* Models */,
+				4C3B4F1D27F4E19200C07A86 /* Utils */,
+				4C3B4F1A27F4E14C00C07A86 /* TableViewCell */,
+				4C3B4F1927F4E11700C07A86 /* ViewModel */,
+				4C3B4F1727F4E0F900C07A86 /* ViewControllers */,
+				4C3B4F1F27F4E1B400C07A86 /* StoryBoards */,
 				4C3B4EF227F4E0B400C07A86 /* LaunchScreen.storyboard */,
+				4C3B4EF027F4E0B400C07A86 /* Assets.xcassets */,
 				4C3B4EF527F4E0B400C07A86 /* Info.plist */,
 			);
 			path = CSVReadApp;
@@ -125,6 +147,88 @@
 				4C3B4F0A27F4E0B400C07A86 /* CSVReadAppUITestsLaunchTests.swift */,
 			);
 			path = CSVReadAppUITests;
+			sourceTree = "<group>";
+		};
+		4C3B4F1727F4E0F900C07A86 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4EEB27F4E0B200C07A86 /* CSVHomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4C3B4F1827F4E10D00C07A86 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2327F4E27B00C07A86 /* CSVModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4C3B4F1927F4E11700C07A86 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2D27F4E45E00C07A86 /* CSVUserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4C3B4F1A27F4E14C00C07A86 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2727F4E2F100C07A86 /* UserTableViewCell.swift */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		4C3B4F1B27F4E15D00C07A86 /* AppDelgates */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4EE727F4E0B200C07A86 /* AppDelegate.swift */,
+				4C3B4EE927F4E0B200C07A86 /* SceneDelegate.swift */,
+			);
+			path = AppDelgates;
+			sourceTree = "<group>";
+		};
+		4C3B4F1C27F4E18300C07A86 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2B27F4E31700C07A86 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4C3B4F1D27F4E19200C07A86 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2927F4E30200C07A86 /* CSVReadUtil.swift */,
+				4C3B4F2F27F4EF0000C07A86 /* CommonUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4C3B4F1E27F4E19D00C07A86 /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2527F4E2A000C07A86 /* Constants.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		4C3B4F1F27F4E1B400C07A86 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4EED27F4E0B200C07A86 /* Main.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		4C3B4F2027F4E23200C07A86 /* CSVFiles */ = {
+			isa = PBXGroup;
+			children = (
+				4C3B4F2127F4E23D00C07A86 /* issues.csv */,
+			);
+			path = CSVFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C3B4F2227F4E23D00C07A86 /* issues.csv in Resources */,
 				4C3B4EF427F4E0B400C07A86 /* LaunchScreen.storyboard in Resources */,
 				4C3B4EF127F4E0B400C07A86 /* Assets.xcassets in Resources */,
 				4C3B4EEF27F4E0B200C07A86 /* Main.storyboard in Resources */,
@@ -258,8 +363,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C3B4EEC27F4E0B200C07A86 /* ViewController.swift in Sources */,
+				4C3B4F2627F4E2A000C07A86 /* Constants.swift in Sources */,
+				4C3B4EEC27F4E0B200C07A86 /* CSVHomeViewController.swift in Sources */,
 				4C3B4EE827F4E0B200C07A86 /* AppDelegate.swift in Sources */,
+				4C3B4F2C27F4E31700C07A86 /* Extensions.swift in Sources */,
+				4C3B4F2A27F4E30200C07A86 /* CSVReadUtil.swift in Sources */,
+				4C3B4F2427F4E27B00C07A86 /* CSVModel.swift in Sources */,
+				4C3B4F3027F4EF0000C07A86 /* CommonUtils.swift in Sources */,
+				4C3B4F2827F4E2F100C07A86 /* UserTableViewCell.swift in Sources */,
+				4C3B4F2E27F4E45E00C07A86 /* CSVUserViewModel.swift in Sources */,
 				4C3B4EEA27F4E0B200C07A86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
