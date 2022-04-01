@@ -12,27 +12,30 @@ class UserTableViewCell : UITableViewCell {
     fileprivate let userFullName: UILabel = {
         let name = UILabel()
         name.translatesAutoresizingMaskIntoConstraints = false
-        name.textColor = .black
-        name.numberOfLines = 0
-        name.font = UIFont.boldSystemFont(ofSize: 20.0)
+        name.textColor = .label
+        name.numberOfLines = defaultZeroValue
+        name.adjustsFontForContentSizeCategory = true
+        name.font = UIFont.preferredFont(forTextStyle: .headline)
         return name
     }()
     
     fileprivate let issueCount: UILabel = {
         let issue = UILabel()
         issue.translatesAutoresizingMaskIntoConstraints = false
-        issue.textColor = .black
-        issue.numberOfLines = 0
-        issue.font = UIFont.boldSystemFont(ofSize: 16.0)
+        issue.textColor = .label
+        issue.numberOfLines = defaultZeroValue
+        issue.adjustsFontForContentSizeCategory = true
+        issue.font = UIFont.preferredFont(forTextStyle: .body)
         return issue
     }()
     
     fileprivate let userDOB: UILabel = {
         let dob = UILabel()
         dob.translatesAutoresizingMaskIntoConstraints = false
-        dob.textColor = .black
-        dob.numberOfLines = 0
-        dob.font = UIFont.boldSystemFont(ofSize: 16.0)
+        dob.textColor = .label
+        dob.numberOfLines = defaultZeroValue
+        dob.adjustsFontForContentSizeCategory = true
+        dob.font = UIFont.preferredFont(forTextStyle: .body)
         return dob
     }()
     
@@ -57,16 +60,16 @@ class UserTableViewCell : UITableViewCell {
     }
     
     private func setUpAutoLayOut() {
-        let constraints = [userFullName.topAnchor.constraint(equalTo: topAnchor, constant: 16),
-                           userFullName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                           userFullName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-                           issueCount.topAnchor.constraint(equalTo: userFullName.bottomAnchor, constant: 16),
-                           issueCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                           issueCount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-                           userDOB.topAnchor.constraint(equalTo: issueCount.bottomAnchor, constant: 16),
-                           userDOB.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
-                           userDOB.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-                           userDOB.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -16)]
+        let constraints = [userFullName.topAnchor.constraint(equalTo: topAnchor, constant: cellAutoLayoutConstant),
+                           userFullName.leadingAnchor.constraint(equalTo: leadingAnchor, constant: cellAutoLayoutConstant),
+                           userFullName.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -cellAutoLayoutConstant),
+                           issueCount.topAnchor.constraint(equalTo: userFullName.bottomAnchor, constant: cellAutoLayoutConstant),
+                           issueCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: cellAutoLayoutConstant),
+                           issueCount.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -cellAutoLayoutConstant),
+                           userDOB.topAnchor.constraint(equalTo: issueCount.bottomAnchor, constant: cellAutoLayoutConstant),
+                           userDOB.leadingAnchor.constraint(equalTo: leadingAnchor, constant: cellAutoLayoutConstant),
+                           userDOB.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -cellAutoLayoutConstant),
+                           userDOB.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -cellAutoLayoutConstant)]
         
         NSLayoutConstraint.activate(constraints)
     }

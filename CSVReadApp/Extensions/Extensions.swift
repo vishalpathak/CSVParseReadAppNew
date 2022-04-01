@@ -23,7 +23,6 @@ extension DispatchQueue {
 
 extension String {
     func getStringDataFromUrl(stringURL: URL?) -> String? {
-        //let fileURL = Bundle.main.url(forResource: stringURL, withExtension: extesion)
         if let url = stringURL {
             do {
                 return try String(contentsOf: url, encoding: .utf8)

@@ -15,13 +15,14 @@ struct CSVUserViewModel {
     init(data: CSVDataModel) {
         self.fullName = ("\(fullNameString)\(data.firstName ?? emptyString) \(data.lastName ?? emptyString)")
         self.dob = ("\(dobString)\(data.dob ?? emptyString)")
-        self.issueCount = ("\(issueCountTitle)\(data.issueCount ?? 0)")
+        self.issueCount = ("\(issueCountTitle)\(data.issueCount ?? defaultZeroValue)")
     }
 }
 
 protocol GetCSVData {
     func getData(csvCompletion: @escaping csvCompletion)
 }
+
 class CSVUsersViewModel: CSVReadUtil, GetCSVData {
     
     func mapDataModelToViewModel(model: [CSVDataModel]?) -> [CSVUserViewModel]? {

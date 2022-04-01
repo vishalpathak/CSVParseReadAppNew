@@ -7,17 +7,17 @@
 
 import UIKit
 
-class CSVHomeViewController: UIViewController, AddActivityIndicator {
+class CSVHomeViewController: BaseViewController {
     var csvViewModelArray = [CSVUserViewModel]()
     fileprivate lazy var tableInfoList: UITableView = {
         let tb = UITableView()
         tb.delegate = self
         tb.dataSource = self
         tb.translatesAutoresizingMaskIntoConstraints = false
-        tb.register(UserTableViewCell.self, forCellReuseIdentifier: cellId)
+        tb.backgroundColor = .systemBackground
+        tb.register(UserTableViewCell.self, forCellReuseIdentifier: userCellIdentifier)
         return tb
     }()
-    var activity: UIActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,7 @@ class CSVHomeViewController: UIViewController, AddActivityIndicator {
     // MARK: - SetUp UI
     func setUpUIForViews() -> Void {
         // For tableView
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         view.addSubview(tableInfoList)
         let views = ["table":self.tableInfoList]
         var constraints =  NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[table]-0-|", options: NSLayoutConstraint.FormatOptions.alignAllTop, metrics: nil, views: views)
@@ -36,8 +36,7 @@ class CSVHomeViewController: UIViewController, AddActivityIndicator {
         let stringConstraint = "V:|-0-[table]-0-|"
         constraints =  NSLayoutConstraint.constraints(withVisualFormat: stringConstraint, options: NSLayoutConstraint.FormatOptions.alignAllCenterX, metrics: nil, views: views)
         self.view.addConstraints(constraints)
-        
-        //For NavigationView
+        // For NavigationView
         self.navigationItem.title = navigationBarTitle
     }
     
@@ -60,26 +59,6 @@ class CSVHomeViewController: UIViewController, AddActivityIndicator {
             }
         }
     }
-    
-    // MARK: - Show Activity
-    func showActivityIndicator() {
-        activity = UIActivityIndicatorView()
-        if #available(iOS 13.0, *) {
-            activity = UIActivityIndicatorView(style: .medium)
-        } else { // Fallback on earlier versions
-            activity = UIActivityIndicatorView(style: .whiteLarge)
-        }
-        activity?.center = view.center
-        activity?.color = .red
-        activity?.hidesWhenStopped = true
-        guard let actView = activity else { return }
-        view.addSubview(actView)
-        actView.startAnimating()
-    }
-    
-    func hideActivity() {
-        activity?.stopAnimating()
-    }
 }
 
 // MARK: - TableView DataSource and Delegate
@@ -89,7 +68,7 @@ extension CSVHomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableInfoList.dequeueReusableCell(withIdentifier: cellId) as? UserTableViewCell  else {
+        guard let cell = tableInfoList.dequeueReusableCell(withIdentifier: userCellIdentifier) as? UserTableViewCell  else {
             return UserTableViewCell()
         }
         let obj = csvViewModelArray[indexPath.row]

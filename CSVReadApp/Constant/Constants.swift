@@ -9,6 +9,7 @@ import Foundation
 
 let fileName = "issues"
 let emptyString = ""
+let defaultZeroValue = 0
 let givenDateFormat = "yyyy-MM-dd'T'HH:mm:ss"
 let expectedDateFormat = "dd MMM yyyy"
 
@@ -17,11 +18,12 @@ let csvErrorCode = 10
 let csvErrorMessage = "something wrong"
 let okTitle = "OK"
 
-let cellId = "cellId"
+let userCellIdentifier = "userCellIdentifier"
 let fullNameString = "Full Name: "
 let dobString = "DOB: "
 let issueCountTitle = "Issue Count: "
 let navigationBarTitle = "All Users"
+let cellAutoLayoutConstant = 16.0
 
 typealias csvCompletion = (_ csvData: [CSVUserViewModel]?, _ requestError: Error?) -> ()
 
