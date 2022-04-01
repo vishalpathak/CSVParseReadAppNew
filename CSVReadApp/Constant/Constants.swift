@@ -21,6 +21,7 @@ let cellId = "cellId"
 let fullNameString = "Full Name: "
 let dobString = "DOB: "
 let issueCountTitle = "Issue Count: "
+let navigationBarTitle = "All Users"
 
 typealias csvCompletion = (_ csvData: [CSVUserViewModel]?, _ requestError: Error?) -> ()
 

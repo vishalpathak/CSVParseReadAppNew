@@ -27,6 +27,7 @@ class CSVHomeViewController: UIViewController, AddActivityIndicator {
     
     // MARK: - SetUp UI
     func setUpUIForViews() -> Void {
+        // For tableView
         view.backgroundColor = .white
         view.addSubview(tableInfoList)
         let views = ["table":self.tableInfoList]
@@ -35,6 +36,9 @@ class CSVHomeViewController: UIViewController, AddActivityIndicator {
         let stringConstraint = "V:|-0-[table]-0-|"
         constraints =  NSLayoutConstraint.constraints(withVisualFormat: stringConstraint, options: NSLayoutConstraint.FormatOptions.alignAllCenterX, metrics: nil, views: views)
         self.view.addConstraints(constraints)
+        
+        //For NavigationView
+        self.navigationItem.title = navigationBarTitle
     }
     
     // MARK: - get data from viewModel
