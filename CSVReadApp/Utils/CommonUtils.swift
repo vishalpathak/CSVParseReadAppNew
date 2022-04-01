@@ -22,8 +22,3 @@ final class CommonUtils {
     }
 }
 
-protocol AddActivityIndicator {
-    var activity: UIActivityIndicatorView? { get set }
-    func showActivityIndicator()
-    func hideActivity()
-}
