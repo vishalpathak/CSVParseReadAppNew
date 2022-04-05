@@ -34,7 +34,8 @@ extension CSVReadUtil {
     func getAllValues(stringData: String) -> [CSVDataModel]? {
         var userArray = [CSVDataModel]()
         let rows = getAllRows(stringData: stringData)
-        let columnTitles = getAllFields(oldFromString: rows.first!)
+        guard let rowsData = rows.first else { return nil}
+        let columnTitles = getAllFields(oldFromString: rowsData)
         let columnArr = columnTitles[0].components(separatedBy: Delimiter.comma.rawValue)
         for i in 0..<rows.count {
             if i != 0 {
