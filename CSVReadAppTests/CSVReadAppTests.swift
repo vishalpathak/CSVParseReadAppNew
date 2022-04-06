@@ -52,7 +52,7 @@ class CSVReadAppTests: XCTestCase {
     
     func testConvertDateFormatter() {
         let expectedDate = "02 Jan 1978"
-        let givenDateStr = CommonUtils.shared.convertDateFormater(strDT: "1978-01-02T00:00:00", givenFormat: givenDateFormat, expectedFormat: expectedDateFormat)
+        let givenDateStr = CommonUtils.convertDateFormater(strDT: "1978-01-02T00:00:00", givenFormat: givenDateFormat, expectedFormat: expectedDateFormat)
         XCTAssertEqual(givenDateStr, expectedDate)
     }
     

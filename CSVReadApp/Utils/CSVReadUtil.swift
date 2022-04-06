@@ -45,7 +45,7 @@ extension CSVReadUtil {
                     let firstName = obj[0]
                     let lastName = obj[1]
                     var objCSV = CSVDataModel(dob: emptyString, firstName: firstName, lastName: lastName, issueCount: ct)
-                    if let dt = CommonUtils.shared.convertDateFormater(strDT: obj[3], givenFormat: givenDateFormat, expectedFormat: expectedDateFormat) {
+                    if let dt = CommonUtils.convertDateFormater(strDT: obj[3], givenFormat: givenDateFormat, expectedFormat: expectedDateFormat) {
                         objCSV.dob = dt
                     }
                     userArray.append(objCSV)

@@ -37,7 +37,7 @@ class CSVUsersViewModel: CSVReadUtil, GetCSVData {
     }
     
     func getData(csvCompletion: @escaping csvCompletion) {
-        var stringCSV: String = emptyString
+        var stringCSV = emptyString
         DispatchQueue.backgroundTask(delay: dealayTime) {
             guard let strData = stringCSV.getStringDataFromUrl(stringURL: BaseUrlPath) else { return }
             stringCSV = strData
